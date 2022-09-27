@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+.a{
+  background-color: blue;
+  color: white;
+}
+.b{
+  background-color: pink;
+  color: black;
+}
+button{
+  background-color: red;
+  color: white;
+  border: none;
+  margin: 1px 0px 1px 4px
+} */
+/* ul{
+  padding: 20px 30px;
+  display: flex;
+  list-style: none;
+  color: white;
+  font-size: 32px;
+  text-decoration: solid;
+  font-weight: lighter;
+  background-color: black;
+  font-family: 'lucida sans';
+  margin: 0 auto;
+}
+li{
+  margin: 0 auto;
+  padding-left: 35px;
+} */
