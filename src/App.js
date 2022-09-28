@@ -8,26 +8,21 @@ let App = () => {
 
   // Add Todos
   let add = () => {
-    // if(!txt){
-    //   alert('Plz fill the data')
-    //   // return;
-    // } 
-      list.push(setTxt);
-      setList([...list]);
+    if(!txt){
+      alert('Plz fill the data')
+      return;
+    } 
+      // list.push(setTxt);
+      setList([...list, txt]);
+      setTxt('')
   };
 
 
     // Edit Todos
-    let b;
-    let edit = (todoVal, todoInd)=> {
-    let a = list.find((elem, id)=>{
-      if(elem === todoVal){
-        b = prompt("Edit Value", elem)
-        return b
-      }
-    })
-      setList([...list, b])
-      console.log(b)
+    let edit = (e, i)=> {
+    let a = prompt("Edit Value", list[i])
+    list[i] = a
+    setList([...list])
     }
 
   
@@ -46,8 +41,8 @@ let App = () => {
     <>
       <div className="container py-5 px-2" style={{height: "100%"}}>
         <div className="row mx-0">
-          <input type="text" placeholder="Enter Todos" className="ps-3 p-1 fs-5 col-xxl-11 col-md-10" onChange={(e) => {
-            setTxt = e.target.value;
+          <input value={txt} type="text" placeholder="Enter Todos" className="ps-3 p-1 fs-5 col-xxl-11 col-md-10" onChange={(e) => {
+            setTxt(e.target.value);
           }}
           />
           <Button click={add} add="btn btn-success col-xxl-1 col-md-2 mt-3 mt-md-0" value="Add Todo" />
@@ -77,3 +72,43 @@ let App = () => {
 };
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   // Add Todos
+//   let add = () => {
+//     // list.push(txt)
+//     setList([...list, text])
+//     setText("")
+//   }
+
+
+//   // Delete Todos
+//   let del = (i) => {
+//     list.splice(i, 1)
+//     setList([...list])
+//   }
+
+//   // Edit Todos
+//   let edit = (i) => {
+//     let a = prompt('Enter edit text', list[i])
+//     list[i] = a
+//     setList([...list])
+//   }
+
+
+// Delete All
+// let deleteAll =()=>{
+//   setList([])
+// }
